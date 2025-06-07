@@ -34,7 +34,7 @@
 
 		// Verify that the file was not created outside the temp directory
 		targetPath := filepath.Join(tmpDir, maliciousPath)
-		log.Printf(targetPath)
+		t.Logf(targetPath)
 		if _, err := os.Stat(targetPath); err == nil {
 			t.Fatalf("Malicious file was created: %s", targetPath)
 		}
